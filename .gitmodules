@@ -1,0 +1,27 @@
+# UR Dependencies
+[submodule "dependencies/Universal_Robots_ROS2_Description"]
+	path = dependencies/Universal_Robots_ROS2_Description
+	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+[submodule "dependencies/Universal_Robots_ROS2_Driver"]
+	path = dependencies/Universal_Robots_ROS2_Driver
+	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver.git
+[submodule "dependencies/Universal_Robots_Client_Library"]
+	path = dependencies/Universal_Robots_Client_Library
+	url = https://github.com/UniversalRobots/Universal_Robots_Client_Library.git
+	branch = master
+[submodule "dependencies/ur_msgs"]
+	path = dependencies/ur_msgs
+	url = https://github.com/ros-industrial/ur_msgs.git
+	branch = foxy-devel
+# MoveIt Dependencies
+[submodule "dependencies/moveit2"]
+	path = dependencies/moveit2
+	url = https://github.com/ros-planning/moveit2.git
+[submodule "dependencies/moveit_msgs"]
+	path = dependencies/moveit_msgs
+	url = https://github.com/ros-planning/moveit_msgs.git
+	branch = ros2
+[submodule "dependencies/moveit_resources"]
+	path = dependencies/moveit_resources
+	url = https://github.com/ros-planning/moveit_resources.git
+	branch = ros2
