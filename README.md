@@ -29,7 +29,8 @@ rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 Build and source the workspace:
 
 ```
-colcon build
+# TODO: Fix build errors
+colcon build --packages-skip ur_controllers
 source install/setup.bash
 ```
 
@@ -42,5 +43,5 @@ source install/setup.bash
 First, check that basic setup worked by launching the UR MoveIt demo launch file:
 
 ```
-ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e use_fake_hardware:=true
+ros2 launch ur_behavior ur_behavior_demo.launch.py ur_type:=ur5e use_fake_hardware:=true
 ```
