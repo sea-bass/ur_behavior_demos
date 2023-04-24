@@ -29,8 +29,7 @@ rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 Build and source the workspace:
 
 ```
-# TODO: Fix build errors
-colcon build --packages-skip ur_controllers
+colcon build
 source install/setup.bash
 ```
 
