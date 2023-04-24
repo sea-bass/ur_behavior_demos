@@ -1,10 +1,9 @@
 import os
 
-from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-from launch.actions import OpaqueFunction
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, OpaqueFunction
 from launch.conditions import IfCondition
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -219,43 +218,26 @@ def launch_setup(context, *args, **kwargs):
         output="screen",
     )
 
-    # Publish TF
-    robot_state_publisher = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        name="robot_state_publisher",
-        output="both",
-        parameters=[robot_description],
+    robot_driver = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution(
+                [FindPackageShare("ur_robot_driver"), "launch", "ur_control.launch.py"]
+            )
+        ),
+        launch_arguments={
+            "robot_ip": "127.0.0.1",
+            "ur_type": ur_type,
+            "launch_rviz": "false",
+            "controller_spawner_timeout": "10",
+            "initial_joint_controller": "joint_trajectory_controller",
+            "headless_mode": "true",
+            "launch_dashboard_client": "false",
+            "activate_joint_controller": "true",
+            "use_fake_hardware": use_fake_hardware,
+        }.items(),
     )
 
-    # ros2_control using FakeSystem as hardware
-    ros2_controllers_path = os.path.join(
-        get_package_share_directory("ur_bringup"),
-        "config",
-        "ur_controllers.yaml",
-    )
-    ros2_control_node = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[robot_description, ros2_controllers_path],
-        output="screen",
-    )
-
-    joint_state_broadcaster_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_state_broadcaster", "-c", "/controller_manager"],
-    )
-
-    arm_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_trajectory_controller", "-c", "/controller_manager"],
-    )
-
-    nodes_to_start = [move_group_node, rviz_node, servo_node,
-                      robot_state_publisher,
-                      ros2_control_node, joint_state_broadcaster_spawner, arm_controller_spawner]
+    nodes_to_start = [move_group_node, rviz_node, servo_node, robot_driver]
 
     return nodes_to_start
 
