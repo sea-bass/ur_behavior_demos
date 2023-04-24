@@ -8,7 +8,7 @@ from launch.conditions import IfCondition
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-from ur_moveit_config.launch_common import load_yaml
+from ur_moveit_config.launch_common import load_yaml, load_yaml_abs
 
 
 def launch_setup(context, *args, **kwargs):
@@ -116,9 +116,9 @@ def launch_setup(context, *args, **kwargs):
         [FindPackageShare(moveit_config_package), "config", "kinematics.yaml"]
     )
 
-    # robot_description_planning = {
-    # "robot_description_planning": load_yaml_abs(str(joint_limit_params.perform(context)))
-    # }
+    robot_description_planning = {
+        "robot_description_planning": load_yaml_abs(str(joint_limit_params.perform(context)))
+    }
 
     # Planning Configuration
     ompl_planning_pipeline_config = {
@@ -130,12 +130,6 @@ def launch_setup(context, *args, **kwargs):
     }
     ompl_planning_yaml = load_yaml("ur_moveit_config", "config/ompl_planning.yaml")
     ompl_planning_pipeline_config["move_group"].update(ompl_planning_yaml)
-
-    # Joint limits configuration
-    description_pkg_str = context.perform_substitution(description_package)
-    ur_type_str = context.perform_substitution(ur_type)
-    joint_limits_yaml = load_yaml(description_pkg_str, f"config/{ur_type_str}/joint_limits.yaml")
-    joint_limits = {"robot_description_planning": joint_limits_yaml}
 
     # Trajectory Execution Configuration
     controllers_yaml = load_yaml("ur_moveit_config", "config/controllers.yaml")
@@ -178,9 +172,8 @@ def launch_setup(context, *args, **kwargs):
             robot_description,
             robot_description_semantic,
             robot_description_kinematics,
-            # robot_description_planning,
+            robot_description_planning,
             ompl_planning_pipeline_config,
-            joint_limits,
             trajectory_execution,
             moveit_controllers,
             planning_scene_monitor_parameters,
@@ -205,7 +198,7 @@ def launch_setup(context, *args, **kwargs):
             robot_description_semantic,
             ompl_planning_pipeline_config,
             robot_description_kinematics,
-            # robot_description_planning,
+            robot_description_planning,
             warehouse_ros_config,
         ],
     )
@@ -221,7 +214,7 @@ def launch_setup(context, *args, **kwargs):
             servo_params,
             robot_description,
             robot_description_semantic,
-            joint_limits,
+            robot_description_planning,
         ],
         output="screen",
     )
