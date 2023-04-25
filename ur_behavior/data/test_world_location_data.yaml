@@ -1,0 +1,86 @@
+#############################
+# Example location metadata #
+#############################
+
+table: 
+  footprint: 
+    type: box
+    dims: [0.9, 1.2]
+    height: 0.5
+  nav_poses:
+    - [-0.95, 0, 0]
+    - [0.95, 0, 3.14]
+  locations:
+    - name: "tabletop"
+      footprint:
+        type: parent
+        padding: 0.1
+  color: [0.2, 0, 0]
+
+desk: 
+  footprint: 
+    type: polygon
+    coords:
+      - [-0.3, -0.3]
+      - [0.3, -0.3]
+      - [0.3, 0.3]
+      - [-0.3, 0.3]
+    height: 0.3
+  locations:
+    - name: "desktop"
+      footprint:
+        type: parent
+      nav_poses:
+        - [0, -0.7, 1.57]
+        - [-0.7, 0, 0]
+        - [0, 0.7, -1.57]
+        - [0.7, 0, 3.14]
+
+counter: 
+  footprint: 
+    type: box
+    dims: [1.2, 0.6]
+    height: 0.75
+  locations:
+    - name: "left"
+      footprint: 
+        type: polygon
+        coords:
+          - [-0.25, -0.25]
+          - [0.25, -0.25]
+          - [0.25, 0.25]
+          - [-0.25, 0.25]
+        offset: [0.3, 0]
+      nav_poses:
+        - [0, 0.7, -1.57]
+        - [0, -0.7, 1.57]
+    - name: "right"
+      footprint: 
+        type: polygon
+        coords:
+          - [-0.25, -0.25]
+          - [0.25, -0.25]
+          - [0.25, 0.25]
+          - [-0.25, 0.25]
+        offset: [-0.3, 0]
+      nav_poses:
+        - [0, 0.7, -1.57]
+        - [0, -0.7, 1.57]
+  color: [0, 0.2, 0]
+
+
+trash_can:
+  footprint:
+    type: mesh
+    model_path: $DATA/sample_models/first_2015_trash_can
+    mesh_path: meshes/trash_can.dae
+  locations:
+    - name: "top"
+      footprint:
+        type: parent
+        padding: 0.05
+  nav_poses:
+    - [0.7, 0.0, 3.14]
+    - [-0.7, 0.0, 0.0]
+  color: [0, 0.35, 0.2]
+ 
