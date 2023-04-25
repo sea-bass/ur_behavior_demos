@@ -1,0 +1,611 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <!-- Model name -->
+  <model name='walls'>
+        <pose>0 0 0 0 0 0</pose>
+        <frame name='walls'/>
+    
+    <!-- All the links go here -->
+    <link name='kitchen'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='kitchen'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='kitchen_collision'>
+        <geometry>
+          <polyline>
+            <point>-1.88 1.5</point>
+            <point>-2.0 1.5</point>
+            <point>-2.0 -6.0</point>
+            <point>5.0 -6.0</point>
+            <point>5.0 1.5</point>
+            <point>4.25 1.5</point>
+            <point>4.34 1.7</point>
+            <point>5.2 1.7</point>
+            <point>5.2 -6.2</point>
+            <point>-2.2 -6.2</point>
+            <point>-2.2 1.7</point>
+            <point>-2.0 1.7</point>
+            <point>-1.88 1.5</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='kitchen_visual'>
+        <geometry>
+          <polyline>
+            <point>-1.88 1.5</point>
+            <point>-2.0 1.5</point>
+            <point>-2.0 -6.0</point>
+            <point>5.0 -6.0</point>
+            <point>5.0 1.5</point>
+            <point>4.25 1.5</point>
+            <point>4.34 1.7</point>
+            <point>5.2 1.7</point>
+            <point>5.2 -6.2</point>
+            <point>-2.2 -6.2</point>
+            <point>-2.2 1.7</point>
+            <point>-2.0 1.7</point>
+            <point>-1.88 1.5</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+            <specular>1 0 0 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='kitchen_1'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='kitchen_1'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='kitchen_1_collision'>
+        <geometry>
+          <polyline>
+            <point>0.44 1.5</point>
+            <point>0.322 1.7</point>
+            <point>2.15 1.7</point>
+            <point>2.07 1.5</point>
+            <point>0.44 1.5</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='kitchen_1_visual'>
+        <geometry>
+          <polyline>
+            <point>0.44 1.5</point>
+            <point>0.322 1.7</point>
+            <point>2.15 1.7</point>
+            <point>2.07 1.5</point>
+            <point>0.44 1.5</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+            <specular>1 0 0 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='bedroom'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='bedroom'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='bedroom_collision'>
+        <geometry>
+          <polyline>
+            <point>7.2 2.3</point>
+            <point>4.61 2.3</point>
+            <point>4.69 2.5</point>
+            <point>7.0 2.5</point>
+            <point>7.0 6.0</point>
+            <point>1.75 6.0</point>
+            <point>1.75 5.35</point>
+            <point>1.55 5.35</point>
+            <point>1.55 6.2</point>
+            <point>7.2 6.2</point>
+            <point>7.2 2.3</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='bedroom_visual'>
+        <geometry>
+          <polyline>
+            <point>7.2 2.3</point>
+            <point>4.61 2.3</point>
+            <point>4.69 2.5</point>
+            <point>7.0 2.5</point>
+            <point>7.0 6.0</point>
+            <point>1.75 6.0</point>
+            <point>1.75 5.35</point>
+            <point>1.55 5.35</point>
+            <point>1.55 6.2</point>
+            <point>7.2 6.2</point>
+            <point>7.2 2.3</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0 0.6 0 1</ambient>
+            <diffuse>0 0.6 0 1</diffuse>
+            <specular>0 0.6 0 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='bedroom_1'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='bedroom_1'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='bedroom_1_collision'>
+        <geometry>
+          <polyline>
+            <point>1.55 2.3</point>
+            <point>1.55 3.35</point>
+            <point>1.75 3.34</point>
+            <point>1.75 2.5</point>
+            <point>2.51 2.5</point>
+            <point>2.42 2.3</point>
+            <point>1.55 2.3</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='bedroom_1_visual'>
+        <geometry>
+          <polyline>
+            <point>1.55 2.3</point>
+            <point>1.55 3.35</point>
+            <point>1.75 3.34</point>
+            <point>1.75 2.5</point>
+            <point>2.51 2.5</point>
+            <point>2.42 2.3</point>
+            <point>1.55 2.3</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0 0.6 0 1</ambient>
+            <diffuse>0 0.6 0 1</diffuse>
+            <specular>0 0.6 0 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='bathroom'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='bathroom'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='bathroom_collision'>
+        <geometry>
+          <polyline>
+            <point>0.2 7.2</point>
+            <point>0.2 5.4</point>
+            <point>0.0 5.41</point>
+            <point>0.0 7.0</point>
+            <point>-5.0 7.0</point>
+            <point>-5.0 2.0</point>
+            <point>-2.18 2.0</point>
+            <point>-2.06 1.8</point>
+            <point>-5.2 1.8</point>
+            <point>-5.2 7.2</point>
+            <point>0.2 7.2</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='bathroom_visual'>
+        <geometry>
+          <polyline>
+            <point>0.2 7.2</point>
+            <point>0.2 5.4</point>
+            <point>0.0 5.41</point>
+            <point>0.0 7.0</point>
+            <point>-5.0 7.0</point>
+            <point>-5.0 2.0</point>
+            <point>-2.18 2.0</point>
+            <point>-2.06 1.8</point>
+            <point>-5.2 1.8</point>
+            <point>-5.2 7.2</point>
+            <point>0.2 7.2</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0 0 0.6 1</ambient>
+            <diffuse>0 0 0.6 1</diffuse>
+            <specular>0 0 0.6 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='bathroom_1'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='bathroom_1'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='bathroom_1_collision'>
+        <geometry>
+          <polyline>
+            <point>0.2 1.91</point>
+            <point>0.0 2.24</point>
+            <point>0.0 3.41</point>
+            <point>0.2 3.4</point>
+            <point>0.2 1.91</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='bathroom_1_visual'>
+        <geometry>
+          <polyline>
+            <point>0.2 1.91</point>
+            <point>0.0 2.24</point>
+            <point>0.0 3.41</point>
+            <point>0.2 3.4</point>
+            <point>0.2 1.91</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0 0 0.6 1</ambient>
+            <diffuse>0 0 0.6 1</diffuse>
+            <specular>0 0 0.6 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='hall_kitchen_bathroom'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='hall_kitchen_bathroom'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='hall_kitchen_bathroom_collision'>
+        <geometry>
+          <polyline>
+            <point>0.322 1.7</point>
+            <point>0.2 1.91</point>
+            <point>0.2 2.3</point>
+            <point>0.554 1.7</point>
+            <point>0.322 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='hall_kitchen_bathroom_visual'>
+        <geometry>
+          <polyline>
+            <point>0.322 1.7</point>
+            <point>0.2 1.91</point>
+            <point>0.2 2.3</point>
+            <point>0.554 1.7</point>
+            <point>0.322 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0.4 0.4 0.4 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+            <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='hall_kitchen_bathroom_1'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='hall_kitchen_bathroom_1'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='hall_kitchen_bathroom_1_collision'>
+        <geometry>
+          <polyline>
+            <point>-2.0 1.7</point>
+            <point>-2.2 1.7</point>
+            <point>-2.2 1.64</point>
+            <point>-2.29 1.8</point>
+            <point>-2.06 1.8</point>
+            <point>-2.0 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='hall_kitchen_bathroom_1_visual'>
+        <geometry>
+          <polyline>
+            <point>-2.0 1.7</point>
+            <point>-2.2 1.7</point>
+            <point>-2.2 1.64</point>
+            <point>-2.29 1.8</point>
+            <point>-2.06 1.8</point>
+            <point>-2.0 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0.4 0.4 0.4 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+            <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='hall_bathroom_bedroom'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='hall_bathroom_bedroom'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='hall_bathroom_bedroom_collision'>
+        <geometry>
+          <polyline>
+            <point>0.2 3.4</point>
+            <point>1.55 3.35</point>
+            <point>1.55 3.15</point>
+            <point>0.2 3.2</point>
+            <point>0.2 3.4</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='hall_bathroom_bedroom_visual'>
+        <geometry>
+          <polyline>
+            <point>0.2 3.4</point>
+            <point>1.55 3.35</point>
+            <point>1.55 3.15</point>
+            <point>0.2 3.2</point>
+            <point>0.2 3.4</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0.4 0.4 0.4 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+            <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='hall_bathroom_bedroom_1'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='hall_bathroom_bedroom_1'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='hall_bathroom_bedroom_1_collision'>
+        <geometry>
+          <polyline>
+            <point>0.2 5.4</point>
+            <point>0.2 5.6</point>
+            <point>1.55 5.55</point>
+            <point>1.55 5.35</point>
+            <point>0.2 5.4</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='hall_bathroom_bedroom_1_visual'>
+        <geometry>
+          <polyline>
+            <point>0.2 5.4</point>
+            <point>0.2 5.6</point>
+            <point>1.55 5.55</point>
+            <point>1.55 5.35</point>
+            <point>0.2 5.4</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0.4 0.4 0.4 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+            <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='hall_kitchen_bedroom'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='hall_kitchen_bedroom'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='hall_kitchen_bedroom_collision'>
+        <geometry>
+          <polyline>
+            <point>4.34 1.7</point>
+            <point>4.61 2.3</point>
+            <point>4.82 2.3</point>
+            <point>4.56 1.7</point>
+            <point>4.34 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='hall_kitchen_bedroom_visual'>
+        <geometry>
+          <polyline>
+            <point>4.34 1.7</point>
+            <point>4.61 2.3</point>
+            <point>4.82 2.3</point>
+            <point>4.56 1.7</point>
+            <point>4.34 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0.4 0.4 0.4 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+            <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+    </link>
+    <link name='hall_kitchen_bedroom_1'>
+      <pose>0 0 0 0 0 0</pose>
+      <frame name='hall_kitchen_bedroom_1'/>
+      <inertial>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+          <mass>1</mass>
+      </inertial>
+      <collision name='hall_kitchen_bedroom_1_collision'>
+        <geometry>
+          <polyline>
+            <point>2.15 1.7</point>
+            <point>1.93 1.7</point>
+            <point>2.2 2.3</point>
+            <point>2.42 2.3</point>
+            <point>2.15 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+      </collision>
+      <visual name='hall_kitchen_bedroom_1_visual'>
+        <geometry>
+          <polyline>
+            <point>2.15 1.7</point>
+            <point>1.93 1.7</point>
+            <point>2.2 2.3</point>
+            <point>2.42 2.3</point>
+            <point>2.15 1.7</point>
+
+            <height>2.0</height>
+          </polyline>
+        </geometry>
+        <material>
+            <ambient>0.4 0.4 0.4 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+            <specular>0.4 0.4 0.4 1</specular>
+        </material>
+      </visual>
+    </link>
+    
+    
+    <static>1</static>
+  </model>
+</sdf>

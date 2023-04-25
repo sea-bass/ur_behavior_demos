@@ -26,3 +26,6 @@
 	path = dependencies/moveit_resources
 	url = https://github.com/ros-planning/moveit_resources.git
 	branch = ros2
+[submodule "dependencies/pyrobosim"]
+	path = dependencies/pyrobosim
+	url = git@github.com:sea-bass/pyrobosim
