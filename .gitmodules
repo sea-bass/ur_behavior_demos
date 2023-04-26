@@ -1,19 +1,12 @@
 # UR Dependencies
 [submodule "dependencies/Universal_Robots_ROS2_Description"]
 	path = dependencies/Universal_Robots_ROS2_Description
-	url = https://github.com/sea-bass/Universal_Robots_ROS2_Description.git
-	branch = update-joint-limits
+	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+	branch = ros2
 [submodule "dependencies/Universal_Robots_ROS2_Driver"]
 	path = dependencies/Universal_Robots_ROS2_Driver
 	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver.git
-[submodule "dependencies/Universal_Robots_Client_Library"]
-	path = dependencies/Universal_Robots_Client_Library
-	url = https://github.com/UniversalRobots/Universal_Robots_Client_Library.git
-	branch = master
-[submodule "dependencies/ur_msgs"]
-	path = dependencies/ur_msgs
-	url = https://github.com/ros-industrial/ur_msgs.git
-	branch = foxy-devel
+	branch = main
 # MoveIt Dependencies
 [submodule "dependencies/moveit2"]
 	path = dependencies/moveit2
